@@ -62,7 +62,7 @@ public class List implements Stack,Queue
     }
     public void dispq()
     {
-        System.out.println("Queue Status : ");
+        System.out.print("Queue Status : ");
         if(f==-1)
         {
             System.out.println("Queue Empty");
@@ -122,10 +122,13 @@ public class List implements Stack,Queue
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-        System.out.println("\nEnter size : ");
+        System.out.print("\nEnter size : ");
         int size =sc.nextInt();
-        System.out.println("\n1.Stack \n2.Queue \nEnter Choice : ");
-        int c=sc.nextInt();
+        int c=0;
+        while(c!=3)
+        {
+        System.out.print("\n1.Stack \n2.Queue \n3.Exit \nEnter Choice : ");
+        c=sc.nextInt();
         if(c==1)
         {
             Stack a=new List(size);
@@ -133,7 +136,7 @@ public class List implements Stack,Queue
 
         while(ch!=4)
         {
-        System.out.println("\n1.Push \n2.Pop \n3.Display \n4.exit \nEnter choice : ");
+        System.out.print("\n1.Push \n2.Pop \n3.Display \n4.exit \nEnter choice : ");
         ch=sc.nextInt();
         if(ch==1)
         {
@@ -160,7 +163,7 @@ public class List implements Stack,Queue
     
             while(ch!=4)
             {
-            System.out.println("\n1.Enqueue \n2.Dequeue \n3.Display \n4.exit \nEnter choice : ");
+            System.out.print("\n1.Enqueue \n2.Dequeue \n3.Display \n4.exit \nEnter choice : ");
             ch=sc.nextInt();
             if(ch==1)
             {
@@ -180,9 +183,14 @@ public class List implements Stack,Queue
             }
             }
         }
+        else if(c==3)
+        {
+            System.out.println("Exited");
+        }
         else
         {
             System.out.println("Invalid choice");
         }
+    }
     }
 }
