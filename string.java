@@ -1,17 +1,16 @@
-public class string
-{
+public class StringValidator {
     private String s;
-    public void sets(String a)
-    {
-        if(a.length>80)
-        {
+
+    // Method to set string and validate its length
+    public void setString(String s) throws ExceptionLineTooLong {
+        if (s.length() > 80) {
             throw new ExceptionLineTooLong(s);
         }
-        this.s=a;
+        this.s = s;
     }
-    public String gets()
-    {
+
+    // Getter for the string
+    public String getString() {
         return s;
-        ystem.out.println("Message : "+e.getMessage());
     }
 }
